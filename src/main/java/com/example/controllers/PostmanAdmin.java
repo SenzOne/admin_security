@@ -18,12 +18,10 @@ import java.util.List;
 public class PostmanAdmin {
 
     private final AdminService adminService;
-    private final RoleService roleService;
 
     @Autowired
-    public PostmanAdmin(AdminService adminService, RoleService roleService) {
+    public PostmanAdmin(AdminService adminService) {
         this.adminService = adminService;
-        this.roleService = roleService;
     }
 
     @GetMapping("/pass")

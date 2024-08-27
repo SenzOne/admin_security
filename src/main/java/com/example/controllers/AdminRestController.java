@@ -34,7 +34,6 @@ public class AdminRestController {
 
     @GetMapping("/showAccount")
     public ResponseEntity<Person> showInfoUser(Principal principal) {
-        System.out.println(principal.getName());
         return new ResponseEntity<>(adminService.findByEmail(principal.getName()), HttpStatus.OK);
     }
 

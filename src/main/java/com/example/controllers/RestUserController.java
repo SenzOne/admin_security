@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.security.Principal;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/user")
@@ -24,9 +25,9 @@ public class RestUserController {
 
     @GetMapping("/showAccount")
     public ResponseEntity<Person> showUserAccount(Principal principal) {
-        System.out.println();
-        Person person = peopleService.findUserByEmail(principal.getName()).get(); //TODO: обработать искл
-        System.out.println();
-        return new ResponseEntity<>(person, HttpStatus.OK);
+        Optional<Person> person = peopleService.findUserByEmail(principal.getName());
+        return person.map(
+                value -> new ResponseEntity<>(value, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 }
