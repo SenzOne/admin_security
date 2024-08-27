@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: your_name
+      changes:
+        - loadData:
+            file: classpath:/db/data/roles.csv
+            tableName: roles
