@@ -1,3 +1,3 @@
-id,age,email,name,last_name,password
-1,22,admin@ya.ru,admin,admin,$2a$10$W/1dR99KsI/XrDJ.TNXHuOJI/UmHyzE8IJKttAeaASxibwfxXKip.
-2,25,user@ya.ru,John,Doe,$2a$10$examplehashforsimplification0000000000000000000000.
+age,email,name,last_name,password
+22,admin@ya.ru,admin,admin,$2a$10$W/1dR99KsI/XrDJ.TNXHuOJI/UmHyzE8IJKttAeaASxibwfxXKip.
+25,user@ya.ru,John,Doe,$2a$10$examplehashforsimplification0000000000000000000000.
