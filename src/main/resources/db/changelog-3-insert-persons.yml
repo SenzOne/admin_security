@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: Semjon Slaschinin
+      changes:
+        - loadData:
+            file: classpath:/db/data/persons.csv
+            tableName: person

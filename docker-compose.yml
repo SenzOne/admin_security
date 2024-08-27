@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  security-db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=authuser
+      - POSTGRES_PASSWORD=authpassword
+      - POSTGRES_DB=security-db
+    ports:
+      - "5432:5432"

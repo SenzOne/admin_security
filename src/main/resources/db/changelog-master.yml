@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog-1-create-tables.yml
+  - include:
+      file: classpath:/db/changelog-2-insert-roles.yml
+  - include:
+      file: classpath:/db/changelog-3-insert-persons.yml
+  - include:
+      file: classpath:/db/changelog-4-insert-person-roles.yml
